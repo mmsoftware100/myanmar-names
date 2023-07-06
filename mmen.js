@@ -4,11 +4,22 @@ var enmap = {"ka":"က","kyoe":"ကျိုး","kyar":"ကြား","chaung":
 
 
 function mm2en(input) {
+    console.log("mm2en " + input);
     var data = segmentWithSeparator(input, " ")
+    console.log("data is ");
+    console.log(data);
+
+    // separator ကို ရှေ့မှာ ကပ်လို့ ပြန်ဖြုတ်တာ
+    // နောက်မှာ ကပ်ရင် နောက်မှာ ဖြုတ်မှာ
     data = data.substr(1)
+    console.log("after data.substr(1) ");
+	console.log(JSON.parse(JSON.stringify(data)));
     var res = "";
+    // ဒီမှာ " " space ကို separator ပဲ
     data.split(" ").map(seg => {
+        console.log(seg);
         if (map[seg] != null) {
+            console.log(map[seg]);
             res = res + " " + map[seg]
         }
         else {
