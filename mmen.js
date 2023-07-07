@@ -16,6 +16,7 @@ function mm2en(input) {
 	console.log(JSON.parse(JSON.stringify(data)));
     var res = "";
     // ဒီမှာ " " space ကို separator ပဲ
+    let data = "hello world";
     data.split(" ").map(seg => {
         console.log(seg);
         if (map[seg] != null) {
